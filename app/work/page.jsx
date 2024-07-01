@@ -18,38 +18,6 @@ import WorkSliderBtns from '@/components/WorkSliderBtns';
 const projects = [
   {
     num: '01',
-    category: 'Database Management',
-    title: 'Storing Air Quality Index values in Realtime',
-    description: 'A web application that stores air quality index values in XAMPP server Database',
-    stack: [
-      {
-        name: 'Python',
-      },
-      {
-        name: 'XAMPP server',
-      }
-    ],
-    image: '/assets/work/thumb5.png',
-    link: "https://drive.google.com/file/d/1l_-80w8fGMbgtBafAf7MnviBLstz6ZmZ/view?usp=sharing"
-  },
-  {
-    num: '02',
-    category: 'Backend',
-    title: 'Face Detection',
-    description: 'Face Detection using OpenCV',
-    stack: [
-      {
-        name: 'Python',
-      },
-      {
-        name: 'OpenCV',
-      }
-    ],
-    image: '/assets/work/thumb3.png',
-    link: "https://github.com/abhishakejutur/projects/tree/qrcode_scanner/Image%20Processing%20Projects/Face%20Detection"
-  },
-  {
-    num: '03',
     category: 'Frontend',
     title: 'Portfolio',
     description: 'My personal portfolio website',
@@ -68,7 +36,39 @@ const projects = [
       },
     ],
     image: '/assets/work/thumb1.png',
-    link: ""
+    link: "https://aj-portfolio-five.vercel.app/"
+  },
+  {
+    num: '02',
+    category: 'Database Management',
+    title: 'Storing and predicting Air Quality Index values in Realtime',
+    description: 'A web application that stores air quality index values in XAMPP server Database',
+    stack: [
+      {
+        name: 'Python',
+      },
+      {
+        name: 'XAMPP server',
+      }
+    ],
+    image: '/assets/work/thumb5.png',
+    link: "https://drive.google.com/file/d/1l_-80w8fGMbgtBafAf7MnviBLstz6ZmZ/view?usp=sharing"
+  },
+  {
+    num: '03',
+    category: 'Backend',
+    title: 'Face Detection',
+    description: 'Face Detection using OpenCV',
+    stack: [
+      {
+        name: 'Python',
+      },
+      {
+        name: 'OpenCV',
+      }
+    ],
+    image: '/assets/work/thumb3.png',
+    link: "https://github.com/abhishakejutur/projects/tree/qrcode_scanner/Image%20Processing%20Projects/Face%20Detection"
   },
   {
     num: '04',
@@ -154,7 +154,7 @@ const Work = () => {
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
                 btnStyles="bg-accent-500 hover:bg-accent-700 text-white rounded-full text-[20px] w-[42px] h-[42px] flex justify-center items-center transition-transform duration-300 ease-in-out transform hover:scale-110"
-                iconsStyles="text-[20px]"
+                iconsStyles="text-[20px] text-accent bg-accent-500 hover:bg-accent-700 rounded-full text-[20px] w-[42px] h-[42px] flex justify-center items-center transition-transform duration-300 ease-in-out transform hover:scale-110"
               />
 
 
