@@ -197,12 +197,12 @@ const Contact = () => {
 
       <Dialog open={isOpen} onClose={closeModal} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
         <Dialog.Panel className="w-full max-w-md p-6 bg-primary rounded-lg">
-          <Dialog.Title className="text-2xl font-bold text-white">Thank you for contacting me...</Dialog.Title>
+          <Dialog.Title className="text-2xl font-bold text-white">Thank you for contacting me!...</Dialog.Title><br />
           <Dialog.Description className="mt-2 text-white">
             I will contact you soon...
-          </Dialog.Description>
+          </Dialog.Description><br />
           <div className="mt-4">
-            <Button onClick={closeModal} className="w-full bg-accent text-white">
+            <Button onClick={closeModal} className="w-full bg-primary text-white border-accent border-x-2 border-y-2 border-accent-hover">
               OK
             </Button>
           </div>
