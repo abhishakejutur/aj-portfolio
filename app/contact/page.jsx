@@ -15,6 +15,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { Dialog } from '@headlessui/react';
 
 const info = [
   {
@@ -34,8 +36,6 @@ const info = [
   },
 ];
 
-import { motion } from "framer-motion";
-
 const Contact = () => {
   const [selectedService, setSelectedService] = useState("");
   const [formData, setFormData] = useState({
@@ -45,6 +45,8 @@ const Contact = () => {
     phone: "",
     message: ""
   });
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -77,7 +79,7 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        alert("Message sent successfully!");
+        setIsOpen(true);
       } else {
         alert("Failed to send message. Please try again.");
       }
@@ -87,105 +89,126 @@ const Contact = () => {
     }
   };
 
+  const closeModal = () => {
+    setIsOpen(false);
+    window.location.reload();
+  };
+
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="py-6"
-    >
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-[30px]">
-          <div className="xl:h-[54%] order-2 xl:order-none w-full xl:w-[50%]">
-            <form method="POST" onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-accent">Let's work together</h3>
-              <p className="text-white/60">
-                I specialize in writing APIs using ASP.NET and have solid skills
-                in database management and SQL servers. I am also proficient in
-                various programming languages and technologies.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input 
-                  placeholder="Firstname" 
-                  type="text" 
-                  name="firstname"
-                  value={formData.firstname}
-                  onChange={handleChange} 
-                required/>
-                <Input 
-                  placeholder="Lastname" 
-                  type="text" 
-                  name="lastname"
-                  value={formData.lastname}
-                  onChange={handleChange} 
-                required/>
-                <Input 
-                  placeholder="Email" 
-                  type="email" 
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange} 
-                required/>
-                <Input 
-                  placeholder="Phone number" 
-                  type="tel" 
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange} 
-                required/>
-              </div>
-              <Select onValueChange={(value) => setSelectedService(value)}>
-                <SelectTrigger className="w-full bg-primary border-none hover:border-accent focus:ring-0">
-                  <SelectValue placeholder="Select a service">
-                    {selectedService ? selectedService : "Select a service"}
-                  </SelectValue>
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="Database Management">
-                      Database Management
-                    </SelectItem>
-                    <SelectItem value="Backend Development">
-                      Backend Development
-                    </SelectItem>
-                    <SelectItem value="Application Development">
-                      Application Development
-                    </SelectItem>
-                    <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
-              <Textarea 
-                placeholder="Your message" 
-                className="h-[200px] bg-primary border-none focus:ring-0"
-                name="message"
-                value={formData.message}
-                onChange={handleChange} 
-              required/>
-              <Button type="submit" className="mt-4">
-                Send Message
-              </Button>
-            </form>
-          </div>
-          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
-            <div className="space-y-6">
-              {info.map((item, index) => (
-                <div key={index} className="flex items-center gap-6">
-                  <div className="text-accent text-xl">{item.icon}</div>
-                  <div>
-                    <h4 className="text-lg font-medium">{item.title}</h4>
-                    <p className="text-white/60">{item.description}</p>
-                  </div>
+    <>
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        }}
+        className={`py-6 ${isOpen ? 'blur-background' : ''}`}
+      >
+        <div className="container mx-auto">
+          <div className="flex flex-col xl:flex-row gap-[30px]">
+            <div className="xl:h-[54%] order-2 xl:order-none w-full xl:w-[50%]">
+              <form method="POST" onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+                <h3 className="text-4xl text-accent">Let's work together</h3>
+                <p className="text-white/60">
+                  I specialize in writing APIs using ASP.NET and have solid skills
+                  in database management and SQL servers. I am also proficient in
+                  various programming languages and technologies.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Input 
+                    placeholder="Firstname" 
+                    type="text" 
+                    name="firstname"
+                    value={formData.firstname}
+                    onChange={handleChange} 
+                  required/>
+                  <Input 
+                    placeholder="Lastname" 
+                    type="text" 
+                    name="lastname"
+                    value={formData.lastname}
+                    onChange={handleChange} 
+                  required/>
+                  <Input 
+                    placeholder="Email" 
+                    type="email" 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange} 
+                  required/>
+                  <Input 
+                    placeholder="Phone number" 
+                    type="tel" 
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange} 
+                  required/>
                 </div>
-              ))}
+                <Select onValueChange={(value) => setSelectedService(value)}>
+                  <SelectTrigger className="w-full bg-primary border-none hover:border-accent focus:ring-0">
+                    <SelectValue placeholder="Select a service">
+                      {selectedService ? selectedService : "Select a service"}
+                    </SelectValue>
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>Select a service</SelectLabel>
+                      <SelectItem value="Database Management">
+                        Database Management
+                      </SelectItem>
+                      <SelectItem value="Backend Development">
+                        Backend Development
+                      </SelectItem>
+                      <SelectItem value="Application Development">
+                        Application Development
+                      </SelectItem>
+                      <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
+                <Textarea 
+                  placeholder="Your message" 
+                  className="h-[200px] bg-primary border-none focus:ring-0"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange} 
+                required/>
+                <Button type="submit" className="mt-4">
+                  Send Message
+                </Button>
+              </form>
+            </div>
+            <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
+              <div className="space-y-6">
+                {info.map((item, index) => (
+                  <div key={index} className="flex items-center gap-6">
+                    <div className="text-accent text-xl">{item.icon}</div>
+                    <div>
+                      <h4 className="text-lg font-medium">{item.title}</h4>
+                      <p className="text-white/60">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </motion.section>
+      </motion.section>
+
+      <Dialog open={isOpen} onClose={closeModal} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <Dialog.Panel className="w-full max-w-md p-6 bg-primary rounded-lg">
+          <Dialog.Title className="text-2xl font-bold text-white">Thank you for contacting me...</Dialog.Title>
+          <Dialog.Description className="mt-2 text-white">
+            I will contact you soon...
+          </Dialog.Description>
+          <div className="mt-4">
+            <Button onClick={closeModal} className="w-full bg-accent text-white">
+              OK
+            </Button>
+          </div>
+        </Dialog.Panel>
+      </Dialog>
+    </>
   );
 };
 
