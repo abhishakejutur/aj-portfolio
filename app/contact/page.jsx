@@ -70,7 +70,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/wirzukzkzv9sa", {
+      const response = await fetch("https://sheetdb.io/api/v1/ifyres7meu6qv", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
