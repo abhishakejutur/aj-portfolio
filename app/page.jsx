@@ -18,7 +18,7 @@ const Home = () => {
               Hello I'm <br /> <span className="text-accent">Jutur Abhishake</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I specialize in writing APIs using ASP.NET and have solid skills in database management and SQL servers. I am also proficient in various programming languages and technologies.
+              I specialize in writing APIs using ASP.NET and have solid skills in database management, PostgreSQL and SQL servers. I am also proficient in various programming languages and technologies.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a href="/assets/Resume/JuturAbhishake.pdf" download className="uppercase flex items-center gap-2">
