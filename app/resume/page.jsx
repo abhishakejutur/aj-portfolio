@@ -96,7 +96,7 @@ const education = {
     {
       institute : "SVSVN School, Rayadurg",
       degree : "X class",
-      duration : "June 2015 - June 2018",
+      duration : "June 2017 - June 2018",
     },
   ]
 }
