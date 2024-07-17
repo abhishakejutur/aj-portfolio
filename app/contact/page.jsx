@@ -78,9 +78,14 @@ const Contact = () => {
         body: JSON.stringify(dataToSend),
       });
 
+      const responseData = await response.json();
+
       if (response.ok) {
+        console.log("Success:", responseData);
         setIsOpen(true);
+        playSound("dialog.mp3"); // Play sound on successful form submission
       } else {
+        console.error("Error response:", responseData);
         alert("Failed to send message. Please try again.");
       }
     } catch (error) {
@@ -89,9 +94,13 @@ const Contact = () => {
     }
   };
 
-  const closeModal = () => {
-    setIsOpen(false);
-    window.location.reload();
+  const playSound = (fileName) => {
+    const audio = new Audio(`/assets/${fileName}`); // Adjust the path to your audio file
+    audio.play();
+  };
+
+  const playClickSound = () => {
+    playSound("click2.mp3");
   };
 
   return (
@@ -120,32 +129,36 @@ const Contact = () => {
                     type="text" 
                     name="firstname"
                     value={formData.firstname}
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    onFocus={playClickSound} 
                   required/>
                   <Input 
                     placeholder="Lastname" 
                     type="text" 
                     name="lastname"
                     value={formData.lastname}
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    onFocus={playClickSound} 
                   required/>
                   <Input 
                     placeholder="Email" 
                     type="email" 
                     name="email"
                     value={formData.email}
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    onFocus={playClickSound} 
                   required/>
                   <Input 
                     placeholder="Phone number" 
                     type="tel" 
                     name="phone"
                     value={formData.phone}
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    onFocus={playClickSound} 
                   required/>
                 </div>
                 <Select onValueChange={(value) => setSelectedService(value)}>
-                  <SelectTrigger className="w-full bg-primary border-none hover:border-accent focus:ring-0">
+                  <SelectTrigger className="w-full bg-primary border-none hover:border-accent focus:ring-0" onFocus={playClickSound}>
                     <SelectValue placeholder="Select a service">
                       {selectedService ? selectedService : "Select a service"}
                     </SelectValue>
@@ -171,7 +184,8 @@ const Contact = () => {
                   className="h-[200px] bg-primary border-none focus:ring-0"
                   name="message"
                   value={formData.message}
-                  onChange={handleChange} 
+                  onChange={handleChange}
+                  onFocus={playClickSound} 
                 required/>
                 <Button type="submit" className="mt-4">
                   Send Message
@@ -195,14 +209,14 @@ const Contact = () => {
         </div>
       </motion.section>
 
-      <Dialog open={isOpen} onClose={closeModal} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
         <Dialog.Panel className="w-full max-w-md p-6 bg-primary rounded-lg">
           <Dialog.Title className="text-2xl font-bold text-white">Thank you for contacting me!...</Dialog.Title><br />
           <Dialog.Description className="mt-2 text-white">
             I will contact you soon...
           </Dialog.Description><br />
           <div className="mt-4">
-            <Button onClick={closeModal} className="w-full bg-primary text-white border-accent border-x-2 border-y-2 border-accent-hover">
+            <Button onClick={() => setIsOpen(false)} className="w-full bg-primary text-white border-accent border-x-2 border-y-2 border-accent-hover">
               OK
             </Button>
           </div>
