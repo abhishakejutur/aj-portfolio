@@ -35,13 +35,21 @@ const MobileNav = () => {
 
     const handleLinkClick = () => {
         setIsOpen(false);
+        const audio = new Audio("/assets/dialog.mp3");
+        audio.play();
+    };
+
+    const playClickSound = () => {
+        setIsOpen(false);
+        const audio = new Audio("/assets/click1.mp3");
+        audio.play();
     };
 
     return (
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-                <button className="flex justify-center items-center">
-                    <CiMenuFries className="text-[32px] text-accent" />
+                <button className="flex justify-center items-center" >
+                    <CiMenuFries className="text-[32px] text-accent" onClick={handleLinkClick} />
                 </button>
             </SheetTrigger>
             <SheetContent className="flex flex-col">
@@ -58,7 +66,7 @@ const MobileNav = () => {
                         <Link 
                             href={link.path} 
                             key={index} 
-                            onClick={handleLinkClick}
+                            onClick={playClickSound}
                             className={`text-xl hover:text-accent capitalize transition-all ${link.path === pathname && "text-accent border-b-2 border-accent" }`}>
                             {link.name}
                         </Link>
