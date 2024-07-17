@@ -1,5 +1,6 @@
 "use client";
 
+import React from 'react';
 import { 
   FaHtml5, 
   FaCss3Alt,  
@@ -7,9 +8,16 @@ import {
   FaPython,
   FaDatabase
 } from "react-icons/fa";
-
 import { SiDotnet, SiMysql, SiPostgresql } from "react-icons/si";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger
+} from "@/components/ui/tooltip";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { motion } from "framer-motion";
 
 const about = {
   title: "About Me",
@@ -96,7 +104,7 @@ const education = {
     {
       institute : "SVSVN School, Rayadurg",
       degree : "X class",
-      duration : "June 2017 - June 2018",
+      duration : "June 2015 - June 2018",
     },
   ]
 }
@@ -140,17 +148,12 @@ const skills = {
   ]
 }
 
-import { Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger
-} from "@/components/ui/tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { motion } from "framer-motion";
-
 const Resume = () => {
+  const playClickSound = () => {
+    const audio = new Audio("/assets/click2.mp3");
+    audio.play();
+  };
+
   return (
     <motion.div 
       initial={{opacity: 0}}
@@ -163,10 +166,10 @@ const Resume = () => {
       <div className="container mx-auto">
         <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="experience" onClick={playClickSound}>Experience</TabsTrigger>
+            <TabsTrigger value="education" onClick={playClickSound}>Education</TabsTrigger>
+            <TabsTrigger value="skills" onClick={playClickSound}>Skills</TabsTrigger>
+            <TabsTrigger value="about" onClick={playClickSound}>About me</TabsTrigger>
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
@@ -193,7 +196,7 @@ const Resume = () => {
               </div>
             </TabsContent>
             <TabsContent value="education" className="w-full">
-            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
                 <ScrollArea className="h-[400px]">
@@ -212,7 +215,7 @@ const Resume = () => {
                     })}
                   </ul>
                 </ScrollArea>
-            </div>
+              </div>
             </TabsContent>
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px]">
