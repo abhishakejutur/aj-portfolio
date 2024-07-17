@@ -90,10 +90,17 @@ const projects = [
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
-  const handleSlideChange = (swiper)=>{
+
+  const handleSlideChange = (swiper) => {
     const currentIndex = swiper.activeIndex;
     setProject(projects[currentIndex]);
-  }
+  };
+
+  const playClickSound = () => {
+    const audio = new Audio("/assets/click2.mp3");
+    audio.play();
+  };
+
   return (
     <motion.section 
       initial={{opacity: 0}} 
@@ -115,10 +122,10 @@ const Work = () => {
               {project.description}
             </p>
             <ul className='flex gap-4 mb-4'>
-              {project.stack.map((item, index)=>{
+              {project.stack.map((item, index) => {
                 return <li key={index} className='text-xl text-accent'>
                   {item.name}{index !== project.stack.length - 1 && ","}
-                  </li>
+                </li>
               })}
             </ul>
             <div className='border border-white/20 mb-4'></div>
@@ -139,14 +146,12 @@ const Work = () => {
           </div>
           <div className='w-full xl:w-[50%]'>
             <Swiper spaceBetween={30} slidesPerView={1} className='xl:h-[520px] mb-12' onSlideChange={handleSlideChange}>
-              {projects.map((project, index)=>{
+              {projects.map((project, index) => {
                 return <SwiperSlide key={index} className='w-full'>
                   <div className='h-[460px] relative group flex justify-center items-center bg-pink-50/20'>
-                    <div className='absolute top-0 bottom-0 w-full h-full bg-black/10 z-10'>
-
-                    </div>
+                    <div className='absolute top-0 bottom-0 w-full h-full bg-black/10 z-10'></div>
                     <div className='relative w-full h-full'>
-                      <Image src={project.image} fill className='object-cover' alt='AJ-Project'/>
+                      <Image src={project.image} fill className='object-cover' alt='AJ-Project' />
                     </div>
                   </div>
                 </SwiperSlide>
@@ -155,9 +160,8 @@ const Work = () => {
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
                 btnStyles="bg-accent-500 hover:bg-accent-700 text-white rounded-full text-[20px] w-[42px] h-[42px] flex justify-center items-center transition-transform duration-300 ease-in-out transform hover:scale-110"
                 iconsStyles="text-[20px] text-accent bg-accent-500 hover:bg-accent-700 rounded-full text-[20px] w-[42px] h-[42px] flex justify-center items-center transition-transform duration-300 ease-in-out transform hover:scale-110"
+                onClick={playClickSound}
               />
-
-
             </Swiper>
           </div>
         </div>
