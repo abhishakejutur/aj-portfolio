@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -21,25 +21,29 @@ const links = [
         name: "work",
         path: "/work",
     }
-]
+];
 
 const Nav = () => {
     const pathname = usePathname();
-    console.log(pathname);
+
+    const playClickSound = () => {
+        const audio = new Audio("/assets/click1.mp3");
+        audio.play();
+    };
+
     return (
         <nav className='flex gap-8'>
-            {links.map((link, index)=>{
-                return( 
-                    <Link 
-                        href={link.path} 
-                        key={index} 
-                        className={`capitalize hover:text-accent font-medium transition-all ${link.path === pathname && "text-accent border-b-2 border-accent" } no-underline`}>
-                        {link.name}
-                    </Link>
-                );
-            })}
+            {links.map((link, index) => (
+                <Link 
+                    href={link.path} 
+                    key={index} 
+                    onClick={playClickSound} 
+                    className={`capitalize hover:text-accent font-medium transition-all ${link.path === pathname && "text-accent border-b-2 border-accent" } no-underline`}>
+                    {link.name}
+                </Link>
+            ))}
         </nav>
-    )
-}
+    );
+};
 
-export default Nav
+export default Nav;
