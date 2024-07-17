@@ -1,25 +1,34 @@
+'use client';
+
 import React from 'react';
 import Link from "next/link";
-import { Button } from './ui/button';
-
-// components
 import Nav from './Nav';
 import MobileNav from './MobileNav';
+import { Button } from './ui/button';
+
+const playClickSound = () => {
+  const audio = new Audio("/assets/dialog.mp3");
+  audio.play();
+};
 
 const Header = () => {
   return (
     <header className='py-8 xl:py-12 text-white'>
       <div className='container mx-auto flex justify-between items-center'>
         {/* logo */}
-        <Link href='/'>
-        <h1 className='text-4xl font-semibold'>Jutur<span className='text-accent'>Abhishake</span></h1>
+        <Link href='/' passHref legacyBehavior>
+          <a className='text-4xl font-semibold'>
+            Jutur<span className='text-accent'>Abhishake</span>
+          </a>
         </Link>
         {/* desktop nav */}
         <div className='hidden xl:flex items-center gap-8'>
-            <Nav />
-            <Link href="/contact">
-                <Button>Hire Me</Button>
-            </Link>
+          <Nav />
+          <Link href="/contact" passHref legacyBehavior>
+            <a>
+              <Button onClick={playClickSound}>Hire Me</Button>
+            </a>
+          </Link>
         </div>
 
         {/* mobile nav */}
