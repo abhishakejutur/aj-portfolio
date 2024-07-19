@@ -59,14 +59,12 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const dataToSend = {
-      data: {
-        firstname: formData.firstname,
-        lastname: formData.lastname,
-        email: formData.email,
-        phonenumber: formData.phone,
-        service_selection: selectedService,
-        message: formData.message,
-      },
+      firstname: formData.firstname,
+      lastname: formData.lastname,
+      email: formData.email,
+      phonenumber: formData.phone,
+      service_selection: selectedService,
+      message: formData.message,
     };
 
     try {
@@ -75,7 +73,7 @@ const Contact = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(dataToSend),
+        body: JSON.stringify({ data: dataToSend }),
       });
 
       const responseData = await response.json();
@@ -101,6 +99,11 @@ const Contact = () => {
 
   const playClickSound = () => {
     playSound("click2.mp3");
+  };
+
+  const handleDialogClose = () => {
+    setIsOpen(false);
+    window.location.reload(); // Reload the page after closing the dialog
   };
 
   return (
@@ -209,14 +212,14 @@ const Contact = () => {
         </div>
       </motion.section>
 
-      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+      <Dialog open={isOpen} onClose={handleDialogClose} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
         <Dialog.Panel className="w-full max-w-md p-6 bg-primary rounded-lg">
           <Dialog.Title className="text-2xl font-bold text-white">Thank you for contacting me!...</Dialog.Title><br />
           <Dialog.Description className="mt-2 text-white">
             I will contact you soon...
           </Dialog.Description><br />
           <div className="mt-4">
-            <Button onClick={() => setIsOpen(false)} className="w-full bg-primary text-white border-accent border-x-2 border-y-2 border-accent-hover">
+            <Button onClick={handleDialogClose} className="w-full bg-primary text-white border-accent border-x-2 border-y-2 border-accent-hover">
               OK
             </Button>
           </div>
