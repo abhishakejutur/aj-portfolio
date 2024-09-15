@@ -1,4 +1,3 @@
-// File: pages/api/send-email.js
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
@@ -13,7 +12,6 @@ export default async function handler(req, res) {
       },
     });
 
-    // Admin notification email
     let mailOptions = {
       from: 'abhishake62232@gmail.com',
       to: 'abhishake62232@gmail.com',
@@ -57,7 +55,6 @@ export default async function handler(req, res) {
       `,
     };
 
-    // Auto-reply email for the user
     let autoReplyOptions = {
       from: 'abhishake62232@gmail.com',
       to: email,
