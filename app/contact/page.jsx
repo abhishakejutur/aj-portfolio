@@ -169,7 +169,7 @@ const Contact = () => {
                   <SelectContent>
                     <SelectGroup>
                       <SelectLabel>Select a service</SelectLabel>
-                      <SelectItem value="Database Management">
+                      <SelectItem value="Full Stack Development">
                         Full Stack Development
                       </SelectItem>
                       <SelectItem value="Backend Development">
