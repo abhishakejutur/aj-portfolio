@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -62,13 +61,13 @@ const Contact = () => {
       firstname: formData.firstname,
       lastname: formData.lastname,
       email: formData.email,
-      phonenumber: formData.phone,
-      service_selection: selectedService,
+      phone: formData.phone,
+      service: selectedService,
       message: formData.message,
     };
 
     try {
-      const response = await fetch("https://sheetdb.io/api/v1/ifyres7meu6qv", {
+      const sheetdbResponse = await fetch("https://sheetdb.io/api/v1/ifyres7meu6qv", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -76,44 +75,39 @@ const Contact = () => {
         body: JSON.stringify({ data: dataToSend }),
       });
 
-      const responseData = await response.json();
-
-      if (response.ok) {
-        console.log("Success:", responseData);
-        setIsOpen(true);
-        playSound("dialog.mp3"); // Play sound on successful form submission
-      } else {
-        console.error("Error response:", responseData);
-        alert("Failed to send message. Please try again.");
+      if (!sheetdbResponse.ok) {
+        throw new Error("Failed to store data in SheetDB");
       }
+
+      const emailResponse = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSend),
+      });
+
+      if (!emailResponse.ok) {
+        throw new Error("Failed to send email");
+      }
+
+      setIsOpen(true); 
     } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("An error occurred. Please try again.");
+      console.error("Error:", error);
+      alert("Failed to submit the form. Please try again.");
     }
-  };
-
-  const playSound = (fileName) => {
-    const audio = new Audio(`/assets/${fileName}`); // Adjust the path to your audio file
-    audio.play();
-  };
-
-  const playClickSound = () => {
-    playSound("click2.mp3");
   };
 
   const handleDialogClose = () => {
     setIsOpen(false);
-    window.location.reload(); // Reload the page after closing the dialog
+    window.location.reload();
   };
 
   return (
     <>
       <motion.section
         initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-        }}
+        animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" }}}
         className={`py-6 ${isOpen ? 'blur-background' : ''}`}
       >
         <div className="container mx-auto">
@@ -133,35 +127,35 @@ const Contact = () => {
                     name="firstname"
                     value={formData.firstname}
                     onChange={handleChange}
-                    onFocus={playClickSound} 
-                  required/>
+                    required
+                  />
                   <Input 
                     placeholder="Lastname" 
                     type="text" 
                     name="lastname"
                     value={formData.lastname}
                     onChange={handleChange}
-                    onFocus={playClickSound} 
-                  required/>
+                    required
+                  />
                   <Input 
                     placeholder="Email" 
                     type="email" 
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    onFocus={playClickSound} 
-                  required/>
+                    required
+                  />
                   <Input 
                     placeholder="Phone number" 
                     type="tel" 
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    onFocus={playClickSound} 
-                  required/>
+                    required
+                  />
                 </div>
                 <Select onValueChange={(value) => setSelectedService(value)}>
-                  <SelectTrigger className="w-full bg-primary border-none hover:border-accent focus:ring-0" onFocus={playClickSound}>
+                  <SelectTrigger className="w-full bg-primary border-none hover:border-accent focus:ring-0">
                     <SelectValue placeholder="Select a service">
                       {selectedService ? selectedService : "Select a service"}
                     </SelectValue>
@@ -169,18 +163,10 @@ const Contact = () => {
                   <SelectContent>
                     <SelectGroup>
                       <SelectLabel>Select a service</SelectLabel>
-                      <SelectItem value="Full Stack Development">
-                        Full Stack Development
-                      </SelectItem>
-                      <SelectItem value="Backend Development">
-                        Backend Development
-                      </SelectItem>
-                      <SelectItem value="Database Management">
-                        Database Management
-                      </SelectItem>
-                      <SelectItem value="Application Development">
-                        Application Development
-                      </SelectItem>
+                      <SelectItem value="Full Stack Development">Full Stack Development</SelectItem>
+                      <SelectItem value="Backend Development">Backend Development</SelectItem>
+                      <SelectItem value="Database Management">Database Management</SelectItem>
+                      <SelectItem value="Application Development">Application Development</SelectItem>
                       <SelectItem value="UI/UX Design">UI/UX Design</SelectItem>
                     </SelectGroup>
                   </SelectContent>
@@ -191,8 +177,8 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  onFocus={playClickSound} 
-                required/>
+                  required
+                />
                 <Button type="submit" className="mt-4">
                   Send Message
                 </Button>
@@ -217,7 +203,7 @@ const Contact = () => {
 
       <Dialog open={isOpen} onClose={handleDialogClose} className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
         <Dialog.Panel className="w-full max-w-md p-6 bg-primary rounded-lg">
-          <Dialog.Title className="text-2xl font-bold text-white">Thank you for contacting me!...</Dialog.Title><br />
+          <Dialog.Title className="text-2xl font-bold text-white">Thank you for contacting me!</Dialog.Title><br />
           <Dialog.Description className="mt-2 text-white">
             I will contact you soon...
           </Dialog.Description><br />
