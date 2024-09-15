@@ -170,10 +170,13 @@ const Contact = () => {
                     <SelectGroup>
                       <SelectLabel>Select a service</SelectLabel>
                       <SelectItem value="Database Management">
-                        Database Management
+                        Full Stack Development
                       </SelectItem>
                       <SelectItem value="Backend Development">
                         Backend Development
+                      </SelectItem>
+                      <SelectItem value="Database Management">
+                        Database Management
                       </SelectItem>
                       <SelectItem value="Application Development">
                         Application Development
