@@ -57,7 +57,7 @@ const MobileNav = () => {
                 <div className="mt-32 mb-40 text-center text-2xl">
                     <Link href="/" onClick={handleLinkClick}>
                         <h1 className="text-4xl font-semibold">
-                            Jutur<span className="text-accent">Abhishake</span>
+                            J.<span className="text-accent">Abhishake</span>
                         </h1>
                     </Link>
                 </div>
