@@ -79,11 +79,6 @@ const experience = {
       duration : "Nov 2023 - May 2024",
     },
     {
-      company : "YHills",
-      position : "Cloud Computing Intern",
-      duration : "Feb 2023 - Mar 2023",
-    },
-    {
       company : "SmartInternz",
       position : "Salesforce Developer",
       duration : "Oct 2022 - Dec 2022",
