@@ -4,11 +4,11 @@ import React from 'react';
 import { 
   FaHtml5, 
   FaCss3Alt,  
-  FaJava,
   FaPython,
   FaDatabase
 } from "react-icons/fa";
-import { SiDotnet, SiMysql, SiPostgresql } from "react-icons/si";
+import { SiMysql, SiPostgresql, SiDotnet, SiNextdotjs } from "react-icons/si";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {
   Tooltip,
@@ -64,9 +64,14 @@ const experience = {
   description: "I specialize in writing APIs using ASP.NET and have solid skills in database management and SQL servers. I am also proficient in various programming languages and technologies.",
   items : [
     {
+      company : "Green Tech Industries",
+      position : "Software Developer",
+      duration : "Sept 2024 - Present",
+    },
+    {
       company : "RideAlott Solutions",
       position : "Backend Developer",
-      duration : "June 2024 - Present",
+      duration : "June 2024 - Aug 2024",
     },
     {
       company : "SlashMark ",
@@ -134,8 +139,8 @@ const skills = {
       name : "SQL Server"
     },
     {
-      icon : <FaJava />,
-      name : "Java"
+      icon : <SiNextdotjs />,
+      name : "Next.js"
     },
     {
       icon : <SiDotnet />,
@@ -147,7 +152,6 @@ const skills = {
     },
   ]
 }
-
 const Resume = () => {
   const playClickSound = () => {
     const audio = new Audio("/assets/click2.mp3");
