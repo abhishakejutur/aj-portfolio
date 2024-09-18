@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 
 const about = {
   title: "About Me",
-  description: "I am a Backend and Database developer with a passion for building APIs using ASP.NET and managing Database using PostgreSQL and Microsoft SQL Server",
+  description: "I am a full stack developer with a passion for building APIs using Next.js, Prisma Client and ASP.NET and managing Database using PostgreSQL and Microsoft SQL Server",
   info:[
     {
       fieldName: "Name",
@@ -61,7 +61,7 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
-  description: "I specialize in writing APIs using ASP.NET and have solid skills in database management and SQL servers. I am also proficient in various programming languages and technologies.",
+  description: "I specialize in writing APIs using ASP.NET, Next.js and have solid skills in database management and SQL servers. I am also proficient in various programming languages and technologies.",
   items : [
     {
       company : "Green Tech Industries",
@@ -89,7 +89,7 @@ const experience = {
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
-  description: "I specialize in writing APIs using ASP.NET and have solid skills in database management and SQL servers. I am also proficient in various programming languages and technologies.",
+  description: "I specialize in writing APIs using ASP.NET, Next.js and have solid skills in database management and SQL servers. I am also proficient in various programming languages and technologies.",
   items : [
     {
       institute : "AITT, Tirupati",
@@ -111,7 +111,7 @@ const education = {
 
 const skills = {
   title: "My Skills",
-  description: "I specialize in writing APIs using ASP.NET and have solid skills in database management and SQL servers. I am also proficient in various programming languages and technologies.",
+  description: "I specialize in writing APIs using ASP.NET, Next.js and have solid skills in database management and SQL servers. I am also proficient in various programming languages and technologies.",
   skillList : [
     {
       icon : <FaHtml5 />,
