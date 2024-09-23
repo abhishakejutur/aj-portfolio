@@ -74,7 +74,7 @@ const projects = [
       }
     ],
     image: '/assets/work/thumb6.png',
-    link: "https://github.com/linkfreight/LF1"
+    link: "https://lfwebapp.vercel.app/"
   },
   {
     num: '04',
