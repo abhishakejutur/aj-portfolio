@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 
 const stats = [
     {
-        num: 6,
+        num: 8,
         text: "Projects Completed"
     },
     {
