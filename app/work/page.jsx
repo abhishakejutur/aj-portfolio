@@ -74,10 +74,45 @@ const projects = [
       }
     ],
     image: '/assets/work/thumb6.png',
-    link: "https://lfwebapp.vercel.app/"
+    link: "https://www.linkfreight.in/"
   },
   {
     num: '04',
+    category: 'Admin Panel',
+    title: 'Admin Panel Application',
+    description: 'This is an admin panel for administrators to monitor and manage user activities, track shipments, and oversee the overall transportation process.',
+    stack: [
+      {
+        name: 'ASP.NET MVC',
+      },
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'PostgreSQL',
+      }
+    ],
+    image: '/assets/work/thumb10.png',
+    link: "https://github.com/linkfreight/admin-panel"
+  },
+  {
+    num: '05',
+    category: 'CHVApps',
+    title: 'CHVApps',
+    description: 'This project is a website for a software company specializing in web development and digital solutions.',
+    stack: [
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'nodemailer',
+      }
+    ],
+    image: '/assets/work/thumb9.png',
+    link: "https://chvapps.vercel.app/"
+  },
+  {
+    num: '06',
     category: 'Admin Panel',
     title: 'Admin Panel Application',
     description: 'This project was completed during my time at RideAllot Solutions. It is a web application designed to track and display user behavior data.',
@@ -96,7 +131,7 @@ const projects = [
     link: "https://github.com/linkfreight/admin-panel"
   },
   {
-    num: '05',
+    num: '07',
     category: 'Face Detection',
     title: 'Face Detection',
     description: 'Face Detection using OpenCV',
@@ -112,7 +147,7 @@ const projects = [
     link: "https://github.com/abhishakejutur/projects/tree/qrcode_scanner/Image%20Processing%20Projects/Face%20Detection"
   },
   {
-    num: '06',
+    num: '08',
     category: 'Call logs Access',
     title: 'Call logs Access Data',
     description: 'A flutter application to access call logs data from the phone',
