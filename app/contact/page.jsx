@@ -46,6 +46,7 @@ const Contact = () => {
   });
 
   const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(false); // Added loading state
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -57,6 +58,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when form is submitted
+
     const dataToSend = {
       firstname: formData.firstname,
       lastname: formData.lastname,
@@ -67,6 +70,7 @@ const Contact = () => {
     };
 
     try {
+      // First, send data to the SheetDB API
       const sheetdbResponse = await fetch("https://sheetdb.io/api/v1/ifyres7meu6qv", {
         method: "POST",
         headers: {
@@ -95,12 +99,18 @@ const Contact = () => {
     } catch (error) {
       console.error("Error:", error);
       alert("Failed to submit the form. Please try again.");
+    } finally {
+      setLoading(false); // Set loading to false after the process completes
     }
   };
 
   const handleDialogClose = () => {
     setIsOpen(false);
     window.location.reload();
+  };
+  const playClickSound = () => {
+    const audio = new Audio("/assets/click2.mp3");
+    audio.play();
   };
 
   return (
@@ -116,8 +126,8 @@ const Contact = () => {
               <form method="POST" onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
                 <h3 className="text-4xl text-accent">Let's work together</h3>
                 <p className="text-white/60">
-                  I specialize in writing APIs using ASP.NET, Next.js, Prisma Client and have solid skills
-                  in database management, Postgresql and SQL servers. I am also proficient in
+                  I specialize in writing APIs using ASP.NET and have solid skills
+                  in database management and SQL servers. I am also proficient in
                   various programming languages and technologies.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -125,6 +135,7 @@ const Contact = () => {
                     placeholder="Firstname" 
                     type="text" 
                     name="firstname"
+                    onClick={playClickSound}
                     value={formData.firstname}
                     onChange={handleChange}
                     required
@@ -133,6 +144,7 @@ const Contact = () => {
                     placeholder="Lastname" 
                     type="text" 
                     name="lastname"
+                    onClick={playClickSound}
                     value={formData.lastname}
                     onChange={handleChange}
                     required
@@ -141,6 +153,7 @@ const Contact = () => {
                     placeholder="Email" 
                     type="email" 
                     name="email"
+                    onClick={playClickSound}
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -149,6 +162,7 @@ const Contact = () => {
                     placeholder="Phone number" 
                     type="tel" 
                     name="phone"
+                    onClick={playClickSound}
                     value={formData.phone}
                     onChange={handleChange}
                     required
@@ -175,12 +189,29 @@ const Contact = () => {
                   placeholder="Your message" 
                   className="h-[200px] bg-primary border-none focus:ring-0"
                   name="message"
+                  onClick={playClickSound}
                   value={formData.message}
                   onChange={handleChange}
                   required
                 />
-                <Button type="submit" className="mt-4">
-                  Send Message
+                <Button type="submit" className="mt-4" disabled={loading}>
+                  {loading ? (
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <div 
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          border: "2px solid rgba(255, 255, 255, 0.5)",
+                          borderTop: "2px solid white",
+                          borderRadius: "50%",
+                          animation: "spin 1s linear infinite"
+                        }}
+                      ></div>
+                      <span style={{ marginLeft: "10px" }}>Sending...</span>
+                    </div>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
               </form>
             </div>
@@ -214,6 +245,13 @@ const Contact = () => {
           </div>
         </Dialog.Panel>
       </Dialog>
+
+      <style jsx>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `}</style>
     </>
   );
 };
