@@ -56,6 +56,22 @@ const projects = [
   },
   {
     num: '03',
+    category: 'CHVApps',
+    title: 'CHVApps',
+    description: 'This project is a website for a software company specializing in web development and digital solutions.',
+    stack: [
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'nodemailer',
+      }
+    ],
+    image: '/assets/work/thumb9.png',
+    link: "https://www.chvapps.in/"
+  },
+  {
+    num: '04',
     category: 'Transporting Application',
     title: 'Transporting Goods Application',
     description: 'This is a freelance project that enables users to transport goods from one location to another.',
@@ -77,7 +93,7 @@ const projects = [
     link: "https://www.linkfreight.in/"
   },
   {
-    num: '04',
+    num: '05',
     category: 'Admin Panel',
     title: 'Admin Panel Application',
     description: 'This is an admin panel for administrators to monitor and manage user activities, track shipments, and oversee the overall transportation process.',
@@ -93,23 +109,7 @@ const projects = [
       }
     ],
     image: '/assets/work/thumb10.png',
-    link: "https://github.com/linkfreight/admin-panel"
-  },
-  {
-    num: '05',
-    category: 'CHVApps',
-    title: 'CHVApps',
-    description: 'This project is a website for a software company specializing in web development and digital solutions.',
-    stack: [
-      {
-        name: 'Next.js',
-      },
-      {
-        name: 'nodemailer',
-      }
-    ],
-    image: '/assets/work/thumb9.png',
-    link: "https://chvapps.vercel.app/"
+    link: "https://www.linkfreight.in/"
   },
   {
     num: '06',
@@ -128,7 +128,7 @@ const projects = [
       }
     ],
     image: '/assets/work/thumb7.png',
-    link: "https://github.com/linkfreight/admin-panel"
+    link: "https://ridealott.app/"
   },
   {
     num: '07',
