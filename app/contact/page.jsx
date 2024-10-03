@@ -46,7 +46,7 @@ const Contact = () => {
   });
 
   const [isOpen, setIsOpen] = useState(false);
-  const [loading, setLoading] = useState(false); // Added loading state
+  const [loading, setLoading] = useState(false); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,7 +58,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true when form is submitted
+    setLoading(true);
 
     const dataToSend = {
       firstname: formData.firstname,
@@ -70,7 +70,6 @@ const Contact = () => {
     };
 
     try {
-      // First, send data to the SheetDB API
       const sheetdbResponse = await fetch("https://sheetdb.io/api/v1/ifyres7meu6qv", {
         method: "POST",
         headers: {
@@ -100,7 +99,7 @@ const Contact = () => {
       console.error("Error:", error);
       alert("Failed to submit the form. Please try again.");
     } finally {
-      setLoading(false); // Set loading to false after the process completes
+      setLoading(false); 
     }
   };
 
@@ -126,9 +125,7 @@ const Contact = () => {
               <form method="POST" onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
                 <h3 className="text-4xl text-accent">Let's work together</h3>
                 <p className="text-white/60">
-                  I specialize in writing APIs using ASP.NET and have solid skills
-                  in database management and SQL servers. I am also proficient in
-                  various programming languages and technologies.
+                  I specialize in developing APIs using ASP.NET, Next.js, and Prisma Client, with solid experience in managing databases like PostgreSQL and SQL servers. I'm also skilled in various programming languages and technologies, and my experience as a full-stack developer includes a strong focus on UI/UX design.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Input 
