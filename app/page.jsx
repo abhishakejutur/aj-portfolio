@@ -25,7 +25,7 @@ const Home = () => {
               Hello I'm <br /> <span className="text-accent">Jutur Abhishake</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I specialize in writing APIs using ASP.NET, Next.js, Primsa Client and have solid skills in database management, Postgresql and SQL servers. I am also proficient in various programming languages and technologies.
+              I specialize in developing APIs using ASP.NET, Next.js, and Prisma Client, with strong expertise in managing databases like PostgreSQL and SQL servers. I'm also skilled in various programming languages and technologies, and my experience as a full-stack developer includes a strong focus on UI/UX design.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a href="/assets/Resume/JuturAbhishake.pdf" download className="uppercase flex items-center gap-2" onClick={playClickSound}>
@@ -38,7 +38,7 @@ const Home = () => {
                 <Socials 
                   containerStyles="flex gap-6" 
                   iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500" 
-                  playClickSound={playClickSound} // Pass the sound function to Socials component
+                  playClickSound={playClickSound}
                 />
               </div>
             </div>
