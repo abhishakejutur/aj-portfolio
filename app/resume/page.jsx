@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 
 const about = {
   title: "About Me",
-  description: "I am a full stack developer with a passion for building APIs using Next.js, Prisma Client and ASP.NET and managing Database using PostgreSQL and Microsoft SQL Server",
+  description: "I specialize in developing APIs using ASP.NET, Next.js, and Prisma Client, with solid experience in managing databases like PostgreSQL and SQL servers. I'm also skilled in various programming languages and technologies, and my experience as a full-stack developer includes a strong focus on UI/UX design.",
   info:[
     {
       fieldName: "Name",
@@ -61,7 +61,7 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
-  description: "I specialize in writing APIs using ASP.NET, Next.js and have solid skills in database management and SQL servers. I am also proficient in various programming languages and technologies.",
+  description: "I specialize in developing APIs using ASP.NET, Next.js, and Prisma Client, with solid experience in managing databases like PostgreSQL and SQL servers. I'm also skilled in various programming languages and technologies, and my experience as a full-stack developer includes a strong focus on UI/UX design.",
   items : [
     {
       company : "Green Tech Industries",
@@ -89,7 +89,7 @@ const experience = {
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
-  description: "I specialize in writing APIs using ASP.NET, Next.js and have solid skills in database management and SQL servers. I am also proficient in various programming languages and technologies.",
+  description: "I specialize in developing APIs using ASP.NET, Next.js, and Prisma Client, with solid experience in managing databases like PostgreSQL and SQL servers. I'm also skilled in various programming languages and technologies, and my experience as a full-stack developer includes a strong focus on UI/UX design.",
   items : [
     {
       institute : "AITT, Tirupati",
@@ -111,7 +111,7 @@ const education = {
 
 const skills = {
   title: "My Skills",
-  description: "I specialize in writing APIs using ASP.NET, Next.js and have solid skills in database management and SQL servers. I am also proficient in various programming languages and technologies.",
+  description: "I specialize in developing APIs using ASP.NET, Next.js, and Prisma Client, with solid experience in managing databases like PostgreSQL and SQL servers. I'm also skilled in various programming languages and technologies, and my experience as a full-stack developer includes a strong focus on UI/UX design.",
   skillList : [
     {
       icon : <FaHtml5 />,
