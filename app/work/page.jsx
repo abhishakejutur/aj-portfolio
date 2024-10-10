@@ -99,9 +99,6 @@ const projects = [
     description: 'This is an admin panel for administrators to monitor and manage user activities, track shipments, and oversee the overall transportation process.',
     stack: [
       {
-        name: 'ASP.NET MVC',
-      },
-      {
         name: 'Next.js',
       },
       {
@@ -109,7 +106,7 @@ const projects = [
       }
     ],
     image: '/assets/work/thumb10.png',
-    link: "https://www.linkfreight.in/"
+    link: "https://lfadmin-panel.vercel.app/"
   },
   {
     num: '06',
