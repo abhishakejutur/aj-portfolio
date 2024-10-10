@@ -5,22 +5,23 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const services = [
+  
   {
     num: '01',
-    title: 'Database Management',
-    description: 'I can manage database using SQL Server, postgreSQL and MySQL.',
+    title: 'Frontend Development',
+    description: 'I can build frontend using NextJs and Figma.',
     href: "/work"
   },
   {
     num: '02',
     title: 'Backend Development',
-    description: 'I can build APIs and backend services using ASP.NET(C#)/Java/Pyhton.',
+    description: 'I can build APIs and backend services using ASP.NET(C#)/NextJs/PrismaClient.',
     href: "https://github.com/abhishakejutur/projects"
   },
   {
     num: '03',
-    title: 'Frontend Development',
-    description: 'I can build frontend using HTML, CSS, Bootstrap and Figma.',
+    title: 'Database Management',
+    description: 'I can manage database using SQL Server, postgreSQL and MySQL.',
     href: "/work"
   },
   {
