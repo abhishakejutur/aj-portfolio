@@ -24,7 +24,7 @@ const Home = () => {
               Hello I'm <br /> <span className="text-accent">Jutur Abhishake</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I specialize in developing APIs using ASP.NET, Next.js, and Prisma Client, with solid experience in managing databases like PostgreSQL and SQL servers. I'm also skilled in various programming languages and technologies, and my experience as a full-stack developer includes a strong focus on UI/UX design.
+              I specialize in building APIs using ASP.NET, Next.js, and I'm good at managing databases like PostgreSQL and SQL servers. As a full-stack developer, I also focus on creating great UI/UX designs.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a href="/assets/Resume/JuturAbhishake.pdf" download className="uppercase flex items-center gap-2" onClick={playClickSound}>
