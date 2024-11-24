@@ -70,9 +70,6 @@ const projects = [
         name: 'Prisma Client',
       },
       {
-        name: 'React',
-      },
-      {
         name: 'PostgreSQL',
       }
     ],
@@ -86,7 +83,7 @@ const projects = [
     description: 'This is an admin panel for administrators to monitor and manage user activities, track shipments, and oversee the overall transportation process.',
     stack: [
       {
-        name: 'ASP.NET MVC',
+        name: 'ASP.NET',
       },
       {
         name: 'Next.js',
