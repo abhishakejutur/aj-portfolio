@@ -36,42 +36,29 @@ const projects = [
       },
     ],
     image: '/assets/work/thumb1.png',
-    link: "https://abhishakejutur.vercel.app/"
+    link: "https://aj-portfolio-five.vercel.app/"
   },
   {
     num: '02',
-    category: 'Web Application',
-    title: 'Machine Learning based Air Quality Index Forcasting',
-    description: 'A web application that predicts/forcast the air quality is good/bad',
-    stack: [
-      {
-        name: 'Python',
-      },
-      {
-        name: 'PostgreSQL',
-      }
-    ],
-    image: '/assets/work/thumb8.png',
-    link: "https://drive.google.com/file/d/1l_-80w8fGMbgtBafAf7MnviBLstz6ZmZ/view?usp=sharing"
-  },
-  {
-    num: '03',
-    category: 'CHVApps',
-    title: 'CHVApps',
-    description: 'This project is a website for a software company specializing in web development and digital solutions.',
+    category: 'Business Forecasting Website',
+    title: 'Business Forecasting Website',
+    description: 'This project was completed during my time at GreenTech Industries. This website to forecast and manage production and shipping plans for products with a monthly shipment schedule',
     stack: [
       {
         name: 'Next.js',
       },
       {
-        name: 'nodemailer',
-      }
+        name: 'ASP.NET',
+      },
+      {
+        name: 'SQL Server',
+      },
     ],
-    image: '/assets/work/thumb9.png',
-    link: "https://www.chvapps.in/"
+    image: '/assets/work/thumb11.png',
+    link: "https://asset.cloudinary.com/dkwt70u2i/438ab518a7ce8d5b292a42605d15a222"
   },
   {
-    num: '04',
+    num: '03',
     category: 'Transporting Application',
     title: 'Transporting Goods Application',
     description: 'This is a freelance project that enables users to transport goods from one location to another.',
@@ -93,11 +80,14 @@ const projects = [
     link: "https://www.linkfreight.in/"
   },
   {
-    num: '05',
+    num: '04',
     category: 'Admin Panel',
     title: 'Admin Panel Application',
     description: 'This is an admin panel for administrators to monitor and manage user activities, track shipments, and oversee the overall transportation process.',
     stack: [
+      {
+        name: 'ASP.NET MVC',
+      },
       {
         name: 'Next.js',
       },
@@ -106,7 +96,23 @@ const projects = [
       }
     ],
     image: '/assets/work/thumb10.png',
-    link: "https://lfadmin-panel.vercel.app/"
+    link: "https://github.com/linkfreight/admin-panel"
+  },
+  {
+    num: '05',
+    category: 'CHVApps',
+    title: 'CHVApps',
+    description: 'This project is a website for a software company specializing in web development and digital solutions.',
+    stack: [
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'nodemailer',
+      }
+    ],
+    image: '/assets/work/thumb9.png',
+    link: "https://chvapps.vercel.app/"
   },
   {
     num: '06',
@@ -125,10 +131,26 @@ const projects = [
       }
     ],
     image: '/assets/work/thumb7.png',
-    link: "https://ridealott.app/"
+    link: "https://github.com/linkfreight/admin-panel"
   },
   {
     num: '07',
+    category: 'Web Application',
+    title: 'Machine Learning based Air Quality Index Forcasting',
+    description: 'A web application that predicts/forcast the air quality is good/bad',
+    stack: [
+      {
+        name: 'Python',
+      },
+      {
+        name: 'PostgreSQL',
+      }
+    ],
+    image: '/assets/work/thumb8.png',
+    link: "https://drive.google.com/file/d/1l_-80w8fGMbgtBafAf7MnviBLstz6ZmZ/view?usp=sharing"
+  },
+  {
+    num: '08',
     category: 'Face Detection',
     title: 'Face Detection',
     description: 'Face Detection using OpenCV',
@@ -144,7 +166,7 @@ const projects = [
     link: "https://github.com/abhishakejutur/projects/tree/qrcode_scanner/Image%20Processing%20Projects/Face%20Detection"
   },
   {
-    num: '08',
+    num: '09',
     category: 'Call logs Access',
     title: 'Call logs Access Data',
     description: 'A flutter application to access call logs data from the phone',
@@ -223,9 +245,9 @@ const Work = () => {
                 return <SwiperSlide key={index} className='w-full'>
                   <div className='h-[460px] relative group flex justify-center items-center bg-pink-50/20'>
                     <div className='absolute top-0 bottom-0 w-full h-full bg-black/10 z-10'></div>
-                    <div className='relative w-full h-full'>
-                      <Image src={project.image} fill className='object-cover' alt='AJ-Project' />
-                    </div>
+                    <div className='relative w-full h-full rounded-lg' style={{ boxShadow: '0 4px 5px rgba(0, 0, 0, 0.8)' }}>
+  <Image src={project.image} fill className='object-cover' alt='AJ-Project' />
+</div>
                   </div>
                 </SwiperSlide>
               })}
