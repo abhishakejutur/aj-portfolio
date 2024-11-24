@@ -54,7 +54,7 @@ const projects = [
         name: 'SQL Server',
       },
     ],
-    image: '/assets/work/thumb11.png',
+    image: '/assets/work/thumb11.jpg',
     link: "https://asset.cloudinary.com/dkwt70u2i/438ab518a7ce8d5b292a42605d15a222"
   },
   {
