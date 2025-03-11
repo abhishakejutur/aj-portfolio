@@ -23,16 +23,13 @@ const projects = [
     description: 'My personal portfolio website',
     stack: [
       {
-        name: 'HTML',
+        name: 'Next.js',
       },
       {
-        name: 'CSS',
+        name: 'nodemailer',
       },
       {
-        name: 'Figma',
-      },
-      {
-        name: 'React/next.js',
+        name: 'Shadcn UI',
       },
     ],
     image: '/assets/work/thumb1.png',
