@@ -39,7 +39,7 @@ const projects = [
     num: '02',
     category: 'Business Logistics Website',
     title: 'Business Forecasting Website',
-    description: 'This project was completed during my time at GreenTech Industries. This website to forecast and manage production and shipping plans for products with a monthly shipment schedule',
+    description: 'This project was completed during my time at GreenTech Industries; login using user email: abhishake62232@gmail.com, admin email: abhishakejutur@gmail.com, and password for both: bl1234.',
     stack: [
       {
         name: 'Next.js',
