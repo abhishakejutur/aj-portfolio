@@ -64,9 +64,14 @@ const experience = {
   description: "I specialize in developing APIs using ASP.NET, Next.js, and Prisma Client, with solid experience in managing databases like PostgreSQL and SQL servers. I'm also skilled in various programming languages and technologies, and my experience as a full-stack developer includes a strong focus on UI/UX design.",
   items : [
     {
+      company : "TCS",
+      position : "Assistant System Engineer",
+      duration : "Jan 2025 - Present",
+    },
+    {
       company : "Green Tech Industries",
       position : "Software Developer",
-      duration : "Sept 2024 - Present",
+      duration : "Sept 2024 - Jan 2025",
     },
     {
       company : "RideAlott Solutions",
@@ -77,11 +82,6 @@ const experience = {
       company : "SlashMark ",
       position : "AI Intern",
       duration : "Nov 2023 - May 2024",
-    },
-    {
-      company : "SmartInternz",
-      position : "Salesforce Developer",
-      duration : "Oct 2022 - Dec 2022",
     },
   ]
 }
