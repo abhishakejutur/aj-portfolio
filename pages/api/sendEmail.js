@@ -7,14 +7,14 @@ export default async function handler(req, res) {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'abhishake62232@gmail.com',
-        pass: 'lyzo pqby duwc xbvi',
+        user: 'abhishakejutur@gmail.com',
+        pass: 'xiak bkhd yllz iwud',
       },
     });
 
     let mailOptions = {
-      from: 'abhishake62232@gmail.com',
-      to: 'abhishake62232@gmail.com',
+      from: 'abhishakejutur@gmail.com',
+      to: 'abhishakejutur@gmail.com',
       subject: `AJ-Portfolio - New notification from ${firstname} ${lastname}`,
       html: `
         <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">
@@ -56,7 +56,7 @@ export default async function handler(req, res) {
     };
 
     let autoReplyOptions = {
-      from: 'abhishake62232@gmail.com',
+      from: 'abhishakejutur@gmail.com',
       to: email,
       subject: `Hey ${firstname}, Thank you for visiting my portfolio!`,
       html: `
