@@ -109,7 +109,7 @@ const projects = [
       }
     ],
     image: '/assets/work/thumb10.png',
-    link: "https://github.com/linkfreight/admin-panel"
+    link: "https://lfadmin-panel.vercel.app/"
   },
   {
     num: '06',
