@@ -18,47 +18,9 @@ import WorkSliderBtns from '@/components/WorkSliderBtns';
 const projects = [
   {
     num: '01',
-    category: 'Frontend',
-    title: 'Portfolio',
-    description: 'My personal portfolio website',
-    stack: [
-      {
-        name: 'Next.js',
-      },
-      {
-        name: 'nodemailer',
-      },
-      {
-        name: 'Shadcn UI',
-      },
-    ],
-    image: '/assets/work/thumb1.png',
-    link: "https://aj-portfolio-five.vercel.app/"
-  },
-  {
-    num: '02',
-    category: 'Business Logistics Website',
-    title: 'Business Forecasting Website',
-    description: 'This project was completed during my time at GreenTech Industries. login using user email: abhishake62232@gmail.com, admin email: abhishakejutur@gmail.com, and password for both: bl1234.',
-    stack: [
-      {
-        name: 'Next.js',
-      },
-      {
-        name: 'Prisma Client',
-      },
-      {
-        name: 'SQL Server',
-      },
-    ],
-    image: '/assets/work/thumb12.jpg',
-    link: "https://businesslogistics.vercel.app/"
-  },
-  {
-    num: '03',
-    category: 'Business Forecasting Website',
-    title: 'Business Forecasting Website',
-    description: 'This project was completed during my time at GreenTech Industries. This website to forecast and manage production and shipping plans for products with a monthly shipment schedule',
+    category: 'GTI Ticketing Tool',
+    title: 'GTI Ticketing Tool',
+    description: 'GTI Ticketing Tool: A Next.js-based incident management platform for raising incidents and assigning tasks, similar to ServiceNow. Demo credentials: Emp ID: 240442, Password: gti1289.',
     stack: [
       {
         name: 'Next.js',
@@ -69,12 +31,78 @@ const projects = [
       {
         name: 'SQL Server',
       },
+      {
+        name: 'Prisma Client',
+      },
     ],
-    image: '/assets/work/thumb11.jpg',
-    link: "https://asset.cloudinary.com/dkwt70u2i/438ab518a7ce8d5b292a42605d15a222"
+    image: '/assets/work/thumb13pro.png',
+    link: "https://gtiticketingtool.vercel.app/"
+  },
+  {
+    num: '02',
+    category: 'GTI Maintenance Tool',
+    title: 'GTI Maintenance Tool',
+    description: 'GTI Maintenance Ticket System: A platform for employees to report issues and track support request status. Live demo: Emp ID: 240442, Password: gti1289.',
+    stack: [
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'ASP.NET',
+      },
+      {
+        name: 'SQL Server',
+      },
+      {
+        name: 'Prisma Client',
+      },
+    ],
+    image: '/assets/work/thumb12pro.png',
+    link: "https://gti-maintenance.vercel.app/"
+  },
+  {
+    num: '03',
+    category: 'Business Logistics',
+    title: 'Business Logistics',
+    description: 'Developed a logistics management system for Greentech Industries using Next.js, Prisma, and SQL Server. Demo Login: User - abhishake62232@gmail.com, Admin - abhishakejutur@gmail.com, Password: bl1234.',
+    stack: [
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'ASP.NET',
+      },
+      {
+        name: 'SQL Server',
+      },
+      {
+        name: 'Prisma Client',
+      },
+    ],
+    image: '/assets/work/thumb14pro.png',
+    link: "https://businesslogistics.vercel.app/"
   },
   {
     num: '04',
+    category: 'Business Forecasting Website',
+    title: 'Business Forecasting Website',
+    description: 'This project was completed during my time at GreenTech Industries. This website to forecast and manage production and shipping plans for products with a monthly shipment schedule',
+    stack: [
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'ASP.NET (Dapper)',
+      },
+      {
+        name: 'SQL Server',
+      },
+    ],
+    image: '/assets/work/thumb11.png',
+    link: "https://asset.cloudinary.com/dkwt70u2i/438ab518a7ce8d5b292a42605d15a222"
+  },
+  {
+    num: '05',
     category: 'Transporting Application',
     title: 'Transporting Goods Application',
     description: 'This is a freelance project that enables users to transport goods from one location to another.',
@@ -86,20 +114,23 @@ const projects = [
         name: 'Prisma Client',
       },
       {
+        name: 'React',
+      },
+      {
         name: 'PostgreSQL',
       }
     ],
-    image: '/assets/work/thumb6.png',
+    image: '/assets/work/thumb15pro.png',
     link: "https://www.linkfreight.in/"
   },
   {
-    num: '05',
+    num: '06',
     category: 'Admin Panel',
     title: 'Admin Panel Application',
     description: 'This is an admin panel for administrators to monitor and manage user activities, track shipments, and oversee the overall transportation process.',
     stack: [
       {
-        name: 'ASP.NET',
+        name: 'ASP.NET MVC',
       },
       {
         name: 'Next.js',
@@ -108,11 +139,11 @@ const projects = [
         name: 'PostgreSQL',
       }
     ],
-    image: '/assets/work/thumb10.png',
+    image: '/assets/work/thumb10pro.png',
     link: "https://lfadmin-panel.vercel.app/"
   },
   {
-    num: '06',
+    num: '07',
     category: 'CHVApps',
     title: 'CHVApps',
     description: 'This project is a website for a software company specializing in web development and digital solutions.',
@@ -128,7 +159,7 @@ const projects = [
     link: "https://chvapps.vercel.app/"
   },
   {
-    num: '07',
+    num: '08',
     category: 'Admin Panel',
     title: 'Admin Panel Application',
     description: 'This project was completed during my time at RideAllot Solutions. It is a web application designed to track and display user behavior data.',
@@ -143,11 +174,11 @@ const projects = [
         name: 'PostgreSQL',
       }
     ],
-    image: '/assets/work/thumb7.png',
+    image: '/assets/work/thumb7pro.png',
     link: "https://github.com/linkfreight/admin-panel"
   },
   {
-    num: '08',
+    num: '09',
     category: 'Web Application',
     title: 'Machine Learning based Air Quality Index Forcasting',
     description: 'A web application that predicts/forcast the air quality is good/bad',
@@ -163,7 +194,29 @@ const projects = [
     link: "https://drive.google.com/file/d/1l_-80w8fGMbgtBafAf7MnviBLstz6ZmZ/view?usp=sharing"
   },
   {
-    num: '09',
+    num: '10',
+    category: 'Frontend',
+    title: 'Portfolio',
+    description: 'My personal portfolio website',
+    stack: [
+      {
+        name: 'HTML',
+      },
+      {
+        name: 'CSS',
+      },
+      {
+        name: 'Figma',
+      },
+      {
+        name: 'React/next.js',
+      },
+    ],
+    image: '/assets/work/thumb1.png',
+    link: "https://aj-portfolio-five.vercel.app/"
+  },
+  {
+    num: '11',
     category: 'Face Detection',
     title: 'Face Detection',
     description: 'Face Detection using OpenCV',
@@ -179,7 +232,7 @@ const projects = [
     link: "https://github.com/abhishakejutur/projects/tree/qrcode_scanner/Image%20Processing%20Projects/Face%20Detection"
   },
   {
-    num: '10',
+    num: '12',
     category: 'Call logs Access',
     title: 'Call logs Access Data',
     description: 'A flutter application to access call logs data from the phone',
