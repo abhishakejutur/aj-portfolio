@@ -35,7 +35,7 @@ const projects = [
         name: 'Prisma Client',
       },
     ],
-    image: '/assets/work/thumb13pro.png',
+    image: '/assets/work/thumb12pro.png',
     link: "https://gtiticketingtool.vercel.app/"
   },
   {
@@ -57,7 +57,7 @@ const projects = [
         name: 'Prisma Client',
       },
     ],
-    image: '/assets/work/thumb12pro.png',
+    image: '/assets/work/thumb13pro.png',
     link: "https://gti-maintenance.vercel.app/"
   },
   {
