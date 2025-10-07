@@ -26,13 +26,10 @@ const projects = [
         name: 'Next.js',
       },
       {
-        name: 'ASP.NET',
+        name: 'Prisma',
       },
       {
         name: 'SQL Server',
-      },
-      {
-        name: 'Prisma Client',
       },
     ],
     image: '/assets/work/thumb12pro.png',
@@ -48,13 +45,10 @@ const projects = [
         name: 'Next.js',
       },
       {
-        name: 'ASP.NET',
+        name: 'Prisma',
       },
       {
         name: 'SQL Server',
-      },
-      {
-        name: 'Prisma Client',
       },
     ],
     image: '/assets/work/thumb13pro.png',
@@ -70,13 +64,10 @@ const projects = [
         name: 'Next.js',
       },
       {
-        name: 'ASP.NET',
+        name: 'Prisma',
       },
       {
         name: 'SQL Server',
-      },
-      {
-        name: 'Prisma Client',
       },
     ],
     image: '/assets/work/thumb14pro.png',
@@ -111,10 +102,7 @@ const projects = [
         name: 'Next.js',
       },
       {
-        name: 'Prisma Client',
-      },
-      {
-        name: 'React',
+        name: 'Prisma',
       },
       {
         name: 'PostgreSQL',
