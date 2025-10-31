@@ -58,7 +58,7 @@ const projects = [
     num: '03',
     category: 'Business Logistics',
     title: 'Business Logistics',
-    description: 'Developed a logistics management system for Greentech Industries using Next.js, Prisma, and SQL Server. Demo Login: User - abhishake62232@gmail.com, Admin - abhishakejutur@gmail.com, Password: bl1234.',
+    description: 'Developed a logistics management system for Greentech Industries using Next.js, Prisma, and SQL Server. Demo Login: User - user@gmail.com, Admin - admin@gmail.com, Password: 12345.',
     stack: [
       {
         name: 'Next.js',
