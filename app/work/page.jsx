@@ -20,7 +20,7 @@ const projects = [
     num: '01',
     category: 'GTI MS Quality Control',
     title: 'GTI MS Quality Control',
-    description: 'Demo credentials: Emp ID: 240442, Password: gti1289.',
+    description: 'GTI MS Quality Control handles all production entries and rejections. Demo credentials: Emp ID: 240442, Password: gti1289.',
     stack: [
       {
         name: 'Next.js',
