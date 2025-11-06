@@ -94,6 +94,22 @@ const projects = [
   },
   {
     num: '05',
+    category: 'Client Portfolio',
+    title: 'Rajyalakshmi Kommineni Portfolio',
+    description: 'This portfolio website built to showcase her skills, projects, and professional profile.',
+    stack: [
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'Prisma',
+      }
+    ],
+    image: '/assets/work/thumb18pro.jpg',
+    link: "https://rajyalakshmi-kommineni.vercel.app/"
+  },
+  {
+    num: '06',
     category: 'Business Logistics',
     title: 'Business Logistics',
     description: 'Developed a logistics management system for Greentech Industries using Next.js, Prisma, and SQL Server. Demo Login: User - user@gmail.com, Admin - admin@gmail.com, Password: 12345.',
@@ -112,7 +128,7 @@ const projects = [
     link: "https://businesslogistics.vercel.app/"
   },
   {
-    num: '06',
+    num: '07',
     category: 'Business Forecasting Website',
     title: 'Business Forecasting Website',
     description: 'This project was completed during my time at GreenTech Industries. This website to forecast and manage production and shipping plans for products with a monthly shipment schedule',
@@ -131,7 +147,7 @@ const projects = [
     link: "https://asset.cloudinary.com/dkwt70u2i/438ab518a7ce8d5b292a42605d15a222"
   },
   {
-    num: '07',
+    num: '08',
     category: 'Transporting Application',
     title: 'Transporting Goods Application',
     description: 'This is a freelance project that enables users to transport goods from one location to another.',
@@ -150,7 +166,7 @@ const projects = [
     link: "https://www.linkfreight.in/"
   },
   {
-    num: '08',
+    num: '09',
     category: 'Admin Panel',
     title: 'Admin Panel Application',
     description: 'This is an admin panel for administrators to monitor and manage user activities, track shipments, and oversee the overall transportation process.',
@@ -169,7 +185,7 @@ const projects = [
     link: "https://lfadmin-panel.vercel.app/"
   },
   {
-    num: '09',
+    num: '10',
     category: 'CHVApps',
     title: 'CHVApps',
     description: 'This project is a website for a software company specializing in web development and digital solutions.',
@@ -185,7 +201,7 @@ const projects = [
     link: "https://chvapps.vercel.app/"
   },
   {
-    num: '10',
+    num: '11',
     category: 'Admin Panel',
     title: 'Admin Panel Application',
     description: 'This project was completed during my time at RideAllot Solutions. It is a web application designed to track and display user behavior data.',
@@ -204,7 +220,7 @@ const projects = [
     link: "https://github.com/linkfreight/admin-panel"
   },
   {
-    num: '11',
+    num: '12',
     category: 'Web Application',
     title: 'Machine Learning based Air Quality Index Forcasting',
     description: 'A web application that predicts/forcast the air quality is good/bad',
@@ -220,7 +236,7 @@ const projects = [
     link: "https://drive.google.com/file/d/1l_-80w8fGMbgtBafAf7MnviBLstz6ZmZ/view?usp=sharing"
   },
   {
-    num: '12',
+    num: '13',
     category: 'Frontend',
     title: 'Portfolio',
     description: 'My personal portfolio website',
@@ -242,7 +258,7 @@ const projects = [
     link: "https://aj-portfolio-five.vercel.app/"
   },
   {
-    num: '13',
+    num: '14',
     category: 'Face Detection',
     title: 'Face Detection',
     description: 'Face Detection using OpenCV',
@@ -258,7 +274,7 @@ const projects = [
     link: "https://github.com/abhishakejutur/projects/tree/qrcode_scanner/Image%20Processing%20Projects/Face%20Detection"
   },
   {
-    num: '14',
+    num: '15',
     category: 'Call logs Access',
     title: 'Call logs Access Data',
     description: 'A flutter application to access call logs data from the phone',
