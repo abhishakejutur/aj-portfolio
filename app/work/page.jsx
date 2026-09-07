@@ -18,28 +18,9 @@ import WorkSliderBtns from '@/components/WorkSliderBtns';
 const projects = [
   {
     num: '01',
-    category: 'SyncfolioTech website',
-    title: 'SyncfolioTech',
-    description: 'This website created to showcase SyncfolioTech and its PDF editor product.',
-    stack: [
-      {
-        name: 'Next.js',
-      },
-      {
-        name: 'nodemailer',
-      },
-      {
-        name: 'vercel',
-      },
-    ],
-    image: '/assets/work/thumb17pro.png',
-    link: "https://syncfoliotech.vercel.app/"
-  },
-  {
-    num: '02',
-    category: 'GTI MS Quality Control',
-    title: 'GTI MS Quality Control',
-    description: 'GTI MS Quality Control handles all production entries and rejections. Demo credentials: Emp ID: 240442, Password: gti1289.',
+    category: 'GTI Task Management',
+    title: 'GTI Task Management',
+    description: 'I built a Jira-inspired GTI Task Management system with a hierarchical tree structure for seamless cross-team workflow tracking—explore the live demo using Demo ID: 240442 and Password: gti1289.',
     stack: [
       {
         name: 'Next.js',
@@ -51,11 +32,11 @@ const projects = [
         name: 'SQL Server',
       },
     ],
-    image: '/assets/work/thumb16pro.jpg',
-    link: "https://gtims-quality-control.vercel.app/"
+    image: '/assets/work/thumb19.jpg',
+    link: "https://gti-task-management.vercel.app/"
   },
   {
-    num: '03',
+    num: '02',
     category: 'GTI Ticketing Tool',
     title: 'GTI Ticketing Tool',
     description: 'GTI Ticketing Tool: A Next.js-based incident management platform for raising incidents and assigning tasks, similar to ServiceNow. Demo credentials: Emp ID: 240442, Password: gti1289.',
@@ -74,7 +55,64 @@ const projects = [
     link: "https://gtiticketingtool.vercel.app/"
   },
   {
+    num: '03',
+    category: 'Monizen AI',
+    title: 'Monizen AI',
+    description: 'Monizen AI is a connectivity platform providing high-speed broadband, internet leased lines, enterprise networking, and managed Wi-Fi solutions.',
+    stack: [
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'nodemailer',
+      },
+      {
+        name: 'vercel',
+      },
+    ],
+    image: '/assets/work/thumb20.jpg',
+    link: "https://monizen-ai.vercel.app/"
+  },
+  {
     num: '04',
+    category: 'SyncfolioTech website',
+    title: 'SyncfolioTech',
+    description: 'This website created to showcase SyncfolioTech and its PDF editor product.',
+    stack: [
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'nodemailer',
+      },
+      {
+        name: 'vercel',
+      },
+    ],
+    image: '/assets/work/thumb17pro.png',
+    link: "https://syncfoliotech.vercel.app/"
+  },
+  {
+    num: '05',
+    category: 'GTI MS Quality Control',
+    title: 'GTI MS Quality Control',
+    description: 'GTI MS Quality Control handles all production entries and rejections. Demo credentials: Emp ID: 240442, Password: gti1289.',
+    stack: [
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'Prisma',
+      },
+      {
+        name: 'SQL Server',
+      },
+    ],
+    image: '/assets/work/thumb16pro.jpg',
+    link: "https://gtims-quality-control.vercel.app/"
+  },
+  {
+    num: '06',
     category: 'GTI Maintenance Tool',
     title: 'GTI Maintenance Tool',
     description: 'GTI Maintenance Ticket System: A platform for employees to report issues and track support request status. Live demo: Emp ID: 240442, Password: gti1289.',
@@ -93,7 +131,7 @@ const projects = [
     link: "https://gti-maintenance.vercel.app/"
   },
   {
-    num: '05',
+    num: '07',
     category: 'Client Portfolio',
     title: 'Rajyalakshmi Kommineni Portfolio',
     description: 'This portfolio website built to showcase her skills, projects, and professional profile.',
@@ -109,7 +147,7 @@ const projects = [
     link: "https://rajyalakshmi-kommineni.vercel.app/"
   },
   {
-    num: '06',
+    num: '08',
     category: 'Business Logistics',
     title: 'Business Logistics',
     description: 'Developed a logistics management system for Greentech Industries using Next.js, Prisma, and SQL Server. Demo Login: User - user@gmail.com, Admin - admin@gmail.com, Password: 12345.',
@@ -128,7 +166,7 @@ const projects = [
     link: "https://businesslogistics.vercel.app/"
   },
   {
-    num: '07',
+    num: '09',
     category: 'Business Forecasting Website',
     title: 'Business Forecasting Website',
     description: 'This project was completed during my time at GreenTech Industries. This website to forecast and manage production and shipping plans for products with a monthly shipment schedule',
@@ -147,7 +185,7 @@ const projects = [
     link: "https://asset.cloudinary.com/dkwt70u2i/438ab518a7ce8d5b292a42605d15a222"
   },
   {
-    num: '08',
+    num: '10',
     category: 'Transporting Application',
     title: 'Transporting Goods Application',
     description: 'This is a freelance project that enables users to transport goods from one location to another.',
@@ -166,7 +204,7 @@ const projects = [
     link: "https://www.linkfreight.in/"
   },
   {
-    num: '09',
+    num: '11',
     category: 'Admin Panel',
     title: 'Admin Panel Application',
     description: 'This is an admin panel for administrators to monitor and manage user activities, track shipments, and oversee the overall transportation process.',
@@ -185,7 +223,7 @@ const projects = [
     link: "https://lfadmin-panel.vercel.app/"
   },
   {
-    num: '10',
+    num: '12',
     category: 'CHVApps',
     title: 'CHVApps',
     description: 'This project is a website for a software company specializing in web development and digital solutions.',
@@ -201,7 +239,7 @@ const projects = [
     link: "https://chvapps.vercel.app/"
   },
   {
-    num: '11',
+    num: '13',
     category: 'Admin Panel',
     title: 'Admin Panel Application',
     description: 'This project was completed during my time at RideAllot Solutions. It is a web application designed to track and display user behavior data.',
@@ -220,7 +258,7 @@ const projects = [
     link: "https://github.com/linkfreight/admin-panel"
   },
   {
-    num: '12',
+    num: '14',
     category: 'Web Application',
     title: 'Machine Learning based Air Quality Index Forcasting',
     description: 'A web application that predicts/forcast the air quality is good/bad',
@@ -236,7 +274,7 @@ const projects = [
     link: "https://drive.google.com/file/d/1l_-80w8fGMbgtBafAf7MnviBLstz6ZmZ/view?usp=sharing"
   },
   {
-    num: '13',
+    num: '15',
     category: 'Frontend',
     title: 'Portfolio',
     description: 'My personal portfolio website',
@@ -258,7 +296,7 @@ const projects = [
     link: "https://aj-portfolio-five.vercel.app/"
   },
   {
-    num: '14',
+    num: '16',
     category: 'Face Detection',
     title: 'Face Detection',
     description: 'Face Detection using OpenCV',
@@ -274,7 +312,7 @@ const projects = [
     link: "https://github.com/abhishakejutur/projects/tree/qrcode_scanner/Image%20Processing%20Projects/Face%20Detection"
   },
   {
-    num: '15',
+    num: '17',
     category: 'Call logs Access',
     title: 'Call logs Access Data',
     description: 'A flutter application to access call logs data from the phone',
