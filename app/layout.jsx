@@ -1,5 +1,5 @@
 import { JetBrains_Mono } from "next/font/google";
-import Head from "next/head";
+// import Head from "next/head";
 import "./globals.css";
 
 //components
@@ -16,17 +16,34 @@ const jetBrainsmono = JetBrains_Mono({
 export const metadata = {
   title: "Jutur Abhishake",
   description: "It's my own personal portfolio",
+  keywords: [
+    "portfolio", 
+    "Jutur Abhishake", 
+    "abhishakejutur", 
+    "aj portfolio vercel", 
+    "web developer", 
+    "projects", 
+    "abhi", 
+    "abhishek", 
+    "software developer", 
+    "software", 
+    "ASP.NET", 
+    "SQL", 
+    "sql", 
+    "engineer"
+  ],
+  authors: [{ name: "Jutur Abhishake" }],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      {/* <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content="portfolio, Jutur Abhishake, web developer, projects, abhi, abhishek, software developer, software, ASP.NET, SQL, sql, engineer" />
         <meta name="author" content="Jutur Abhishake" />
-      </Head>
+      </Head> */}
       <body className={jetBrainsmono.variable}>
         <Header />
         <StairTransition />
