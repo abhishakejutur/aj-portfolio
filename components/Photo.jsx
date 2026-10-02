@@ -16,7 +16,7 @@ export const Photo = () => {
           animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" } }}
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-normal absolute"
         >
-          <Image src="/assets/AJ-Rounded.png" alt="JA" priority quality={100} fill className="object-contain" />
+          <Image src="/assets/AJ-Rounded.png" alt="Jutur Abhishake - Full Stack Developer Portfolio" priority quality={100} fill className="object-contain" />
         </motion.div>
 
         <motion.svg 
