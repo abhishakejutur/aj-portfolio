@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://abhishakejutur.vercel.app/';
+  const baseUrl = 'https://abhishakejutur.vercel.app';
 
   return [
     {
