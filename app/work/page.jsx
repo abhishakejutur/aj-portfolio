@@ -236,7 +236,7 @@ const projects = [
       }
     ],
     image: '/assets/work/thumb9.png',
-    link: "https://chvapps.vercel.app/"
+    link: "https://chvapps.in/"
   },
   {
     num: '13',
